@@ -1,0 +1,23 @@
+# Secrets et configuration locale : ne jamais committer
+.env
+.env_*
+!.env_example*
+user.cnf
+*.cnf
+*.key
+
+# Sauvegardes et dumps
+*.sql
+*.tar.gz
+backup_*/
+dumps/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Divers
+.DS_Store
+*.log
