@@ -48,6 +48,13 @@ Durée de résolution = date de résolution − date de création, en temps cale
 - Données de test contrôlées, pas de copie implicite de la production.
 - Semaine de test de référence : fenêtre UTC 2026-09-27 21:00 → 2026-10-04 21:00 (2 créés, 1 résolu, 1 en cours, 0 clos), à reproduire avec des données fixes.
 
+## Mesure de succès
+
+- Le rapport arrive chaque lundi sans intervention manuelle.
+- Les chiffres correspondent à une vérification manuelle faite sur une semaine réelle, avant la mise en service.
+- La sortie va uniquement vers Discord (canal admin).
+- Le webhook Discord est stocké dans `.env` uniquement, jamais dans le dépôt ni dans la documentation.
+
 ## Points ouverts
 
 - Tickets de test 33, 34, 36 encore présents en base de test : décision à prendre.
