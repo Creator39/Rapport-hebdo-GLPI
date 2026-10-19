@@ -1,7 +1,19 @@
 [project]
 name = "rapport-hebdo-glpi"
 version = "0.1.0"
-description = "Add your description here"
+description = "Rapport hebdomadaire d'incidents GLPI, envoyé sur Discord"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "docker>=7.2.0",
+    "PyMySQL>=1.1",
+    "requests>=2.31",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

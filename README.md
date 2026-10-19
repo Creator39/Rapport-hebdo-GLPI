@@ -13,11 +13,17 @@ Le détail des règles métier est dans [docs/specification.md](docs/specificati
 
 ## Installation
 
+Le projet utilise [uv](https://docs.astral.sh/uv/).
+
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync                # crée .venv et installe les dépendances (dont le groupe dev)
 cp .env_example .env   # puis renseigner les valeurs locales
+```
+
+## Lancer
+
+```bash
+uv run python -m src.main
 ```
 
 ## Tests
@@ -25,8 +31,17 @@ cp .env_example .env   # puis renseigner les valeurs locales
 Les tests tournent sur des données contrôlées, jamais sur une copie de la production.
 
 ```bash
-pytest tests/
+uv run pytest
 ```
+
+## Ajouter une dépendance
+
+```bash
+uv add <paquet>            # dépendance d'exécution
+uv add --dev <paquet>      # dépendance de test
+```
+
+Committer `pyproject.toml` et `uv.lock`.
 
 ## Sécurité
 
