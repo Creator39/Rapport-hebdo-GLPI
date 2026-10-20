@@ -22,8 +22,16 @@ cp .env_example .env   # puis renseigner les valeurs locales
 
 ## Lancer
 
+Premier essai, sans envoi sur Discord :
+
 ```bash
-uv run python -m src.main
+PYTHONPATH=src uv run python -m rapport_glpi --dry-run
+```
+
+Envoi réel :
+
+```bash
+PYTHONPATH=src uv run python -m rapport_glpi
 ```
 
 ## Tests
